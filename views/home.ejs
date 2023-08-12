@@ -1,0 +1,13 @@
+<%- include("partials/header")-%>
+
+
+<h1>Home</h1>
+<p><%= homeBlog %></p>
+
+<% blogs.forEach(function(blog){ %>
+    <h2><%= blog.blogTitle %></h2>
+    <p><%= blog.blogContent.substring(1,50)+"..." %><a href="/blogs/<%=blog.blogTitle%>">more</a></p>
+<% }); %>
+
+
+<%-include("partials/footer")-%>
